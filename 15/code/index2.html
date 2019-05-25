@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>工具提示插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		a:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body style="margin: 100px;">
+
+
+<!-- <a href="#" 
+			data-toggle="tooltip" 
+			data-original-title="<b>超文本标识符</b>"
+			title="超文本标识符"
+			data-animation="false"
+			data-html="true"
+			data-placement="auto top"
+			data-trigger="hover focus"
+			data-delay="100"
+			data-template="<div
+class='tooltip'><div
+class='tooltip-arrow'></div><div
+class='tooltip-inner'>123</div></div>"
+>HTML5</a> -->
+
+<!-- <div id="selection">
+	<a href="#" rel="tooltip" data-toggle="tooltip" title="超文本标识符">HTML5</a>
+	<a href="#" data-toggle="tooltip" title="超文本标识符">HTML5</a>
+</div> -->
+
+<!-- <div class="btn-group">
+	<button class="btn btn-default" data-toggle="tooltip" title="超文本标识符">左</button>
+	<button class="btn btn-default" data-toggle="tooltip" title="超文本标识符">中</button>
+	<button class="btn btn-default" data-toggle="tooltip" title="超文本标识符">右</button>
+</div> -->
+
+
+<a href="#" data-toggle="tooltip" title="超文本标识符">HTML5</a>
+
+<button class="btn btn-default">按钮</button>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	$('a').tooltip({
+		trigger : 'click'
+	});
+
+	$('button').on('click', function () {
+		// $('a').tooltip('show');
+		// $('a').tooltip('hide');
+		// $('a').tooltip('toggle');
+		// $('a').tooltip('destroy');
+	})
+
+	$('a').on('show.bs.tooltip', function () {
+		alert('显示前触发！');
+	});
+
+	// $('button').tooltip({
+	// 	delay : {
+	// 		show : 100,
+	// 		hide : 100,
+	// 	},
+	// 	container : 'body'
+	// });
+	// 	// placement : 'left'
+	// });
+
+	// $('#selection').tooltip({
+	// 	selector : 'a[rel=tooltip]'
+	// });
+</script>
+</body>
+</html>

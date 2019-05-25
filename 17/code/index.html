@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>按钮插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		a:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body style="margin: 200px;">
+<!-- 
+<button class="btn btn-primary" data-toggle="button" autocomplete="off">按钮</button> -->
+
+<!-- <div class="btn-group" data-toggle="buttons">
+	<label for="" class="btn btn-primary active">
+		<input type="radio" name="sex" value="男" checked>男
+	</label>
+	<label for="" class="btn btn-primary">
+		<input type="radio" name="sex" value="女">女
+	</label>
+</div> -->
+
+<!-- <div class="btn-group" data-toggle="buttons">
+	<label for="" class="btn btn-primary active">
+		<input type="checkbox" name="fa" value="体育" checked>体育
+	</label>
+	<label for="" class="btn btn-primary">
+		<input type="checkbox" name="fa" value="音乐">音乐
+	</label>
+	<label for="" class="btn btn-primary">
+		<input type="checkbox" name="fa" value="艺术">艺术
+	</label>
+	<label for="" class="btn btn-primary">
+		<input type="checkbox" name="fa" value="电脑">电脑
+	</label>
+</div> -->
+
+
+<!-- <button class="btn btn-primary" data-loading-text="Loading..." autocomplete="off">开始上传</button>
+ -->
+
+<button class="btn btn-primary" autocomplete="off">按钮</button>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	// $('button').on('click', function () {
+	// 	var btn = $(this).button('loading');
+	// 	setTimeout(function () {
+	// 		btn.button('reset');
+	// 	}, 1000);
+	// });
+
+	$('button').on('click', function () {
+		$(this).button('toggle');
+	});
+
+</script>
+</body>
+</html>

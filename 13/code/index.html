@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>模态框插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+	</style>
+</head>
+<body style="margin: 100px;">
+
+<!-- 模态框声明 -->
+<div class="modal fade" id="myModal" tabindex="-1">
+	<!-- 窗口声明 -->
+	<div class="modal-dialog">
+		<!-- 内容声明 -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				<h4 class="modal-title">会员登陆</h4>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-4">1</div>
+						<div class="col-md-4">2</div>
+						<div class="col-md-4">3</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default">注册</button>
+				<button class="btn btn-primary">登录</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button class="btn btn-primary btn-lg" id="btn">点击弹窗</button>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+	$('#btn').on('click', function () {
+		$('#myModal').modal('show');
+	});
+
+	$('#myModal').modal({
+		show : false,
+		remote : 'content.html'
+	});
+
+	$('#myModal').on('show.bs.modal', function () {
+		alert('当调用show方法时立即触发！');
+	});
+
+	$('#myModal').on('shown.bs.modal', function () {
+		alert('当弹窗完全出现再执行！');
+	});	
+
+	$('#myModal').on('hide.bs.modal', function () {
+		alert('当调用hide方法时立即触发！');
+	});
+
+	$('#myModal').on('hidden.bs.modal', function () {
+		alert('当模态框完全关闭后触发');
+	});
+
+	$('#myModal').on('loaded.bs.modal', function () {
+		alert('当远程加载后触发！');
+	});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>折叠插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		a:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body style="margin: 100px;">
+
+
+<!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#content">Bootstrap</button>
+
+<div class="collapse" id="content">
+	<div class="well">Bootstrap 是Twitter 推出的一个用于前端开发的开源工具包。它由Twitter 的设计师Mark Otto 和Jacob Thornton 合作开发,是一个CSS/HTML 框架。目前,Bootstrap 最新版本为3.0 。</div>
+</div> -->
+
+
+<!-- <div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">第一部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+				第一部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">第二部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				第二部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">第三部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				第三部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseFour" data-toggle="collapse" data-parent="#accordion">第四部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+				第四部分内容
+			</div>
+		</div>
+	</div>
+
+
+</div> -->
+
+<!-- <div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseOne" data-toggle="collapse">第一部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+				第一部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseTwo" data-toggle="collapse">第二部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				第二部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseThree" data-toggle="collapse">第三部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				第三部分内容
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#collapseFour" data-toggle="collapse">第四部分链接</a>
+			</h4>
+		</div>
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+				第四部分内容
+			</div>
+		</div>
+	</div>
+
+
+</div> -->
+
+<button class="btn btn-primary" data-target="#content">Bootstrap</button>
+
+<div class="collapse" id="content">
+	<div class="well">Bootstrap 是Twitter 推出的一个用于前端开发的开源工具包。它由Twitter 的设计师Mark Otto 和Jacob Thornton 合作开发,是一个CSS/HTML 框架。目前,Bootstrap 最新版本为3.0 。</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	// $('#collapseOne, #collapseTow, #collapseThree, #collapseFour').collapse({
+	// 	parent : '#accordion',
+	// 	toggle : false,
+	// });
+
+	$('button').on('click', function () {
+		// $('#content').collapse('toggle');
+		// $('#content').collapse({
+		// 	toggle : true,
+		// });
+		$('#content').collapse('show');
+	});
+
+	$('#content').on('show.bs.collapse', function () {
+		alert('调用show方法是触发');
+	});
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>警告插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		a:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body style="margin: 100px;">
+
+
+<!-- <div class="alert alert-warning fade in">
+	<button class="close" data-dismiss="alert">
+		<span>&times;</span>
+	</button>
+	<p>警告：您的浏览器不支持！</p>
+</div> -->
+
+<div id="alert" class="alert alert-warning fade in">
+	<button class="close">
+		<span>&times;</span>
+	</button>
+	<p>警告：您的浏览器不支持！</p>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	$('.close').on('click', function () {
+		$('#alert').alert('close');
+	});
+
+	$('#alert').on('close.bs.alert', function () {
+		alert('close');
+	});
+
+</script>
+</body>
+</html>

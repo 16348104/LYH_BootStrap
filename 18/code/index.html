@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>轮播插件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		a:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+
+
+<!-- data-ride="carousel" 自动轮播 -->
+<div id="myCarousel" class="carousel slide" style="width:900px">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="img/slide1.png" alt="第一张">
+		</div>
+		<div class="item">
+			<img src="img/slide2.png" alt="第二张">
+		</div>
+		<div class="item">
+			<img src="img/slide3.png" alt="第三张">
+		</div>
+	</div>
+	<a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+	<a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+</div>
+
+<button id="cycle" class="btn btn-default">开始</button>
+<button id="pause" class="btn btn-default">停止</button>
+<button id="number" class="btn btn-default">播放第三条</button>
+<button id="prev" class="btn btn-default">上一个</button>
+<button id="next" class="btn btn-default">下一个</button>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	// $('#myCarousel').carousel({
+	// 	interval : 2000,
+	// 	pause : 'hover',
+	// 	wrap : false,
+	// });
+
+	$('#cycle').on('click', function () {
+		$('#myCarousel').carousel('cycle');
+	});
+
+	$('#pause').on('click', function () {
+		$('#myCarousel').carousel('pause');
+	});
+
+	$('#number').on('click', function () {
+		$('#myCarousel').carousel(2);
+	});
+
+	$('#prev').on('click', function () {
+		$('#myCarousel').carousel('prev');
+	});
+
+	$('#next').on('click', function () {
+		$('#myCarousel').carousel('next');
+	});
+
+	$('#myCarousel').on('slide.bs.carousel', function () {
+		alert('执行之前调用');
+	});
+
+	$('#myCarousel').on('slid.bs.carousel', function () {
+		alert('执行完毕后调用');
+	});
+
+</script>
+</body>
+</html>
